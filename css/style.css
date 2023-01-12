@@ -1,0 +1,325 @@
+/* Atributos generales para todos los HTML */
+*{margin: 0;
+padding: 0;}
+
+main,article,section{font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: lightgrey;}
+
+nav{background-color: darkgrey;}
+ul li {display: inline-block;padding-top: 5px;padding-bottom: 10px;}
+a {font-family: Verdana, Geneva, Tahoma, sans-serif;
+color: darkolivegreen;
+padding-right: 5px;
+font-weight: bold;
+text-decoration: none;}
+
+.h1-index{margin-bottom: 20px;}
+
+.p-index{margin-bottom: 20px}
+
+.h4-index{font-size: 30px;
+    margin-bottom: 20px}
+
+.logo-instagram-contacto, .logo-facebook-contacto, .logo-telefono-contacto, .logo-whatsapp-contacto{
+    width: 120px;
+    height: 120px;
+    margin: 15px;px
+}
+
+.mapa-contacto{padding-left: 350px;}
+
+.h3-contacto{padding-left: 300px;
+font-size: 25px;}
+
+.euge-sobremi{height: 800;
+width: 400px;
+margin-bottom: 50px;}
+
+.sobre-mi-txt{color: darkolivegreen;}
+
+/*comienzo a dar estilos mobile first 0-500*/
+
+/*Desde aca son estilos para el html "Clases"*/
+
+*{
+    padding: 0;
+    margin:0;
+}
+
+body{
+    text-align: center;
+    font-family: 'Poppins',sans-serif;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+header{
+    font-size: 15px;
+    justify-content: center;
+    font-weight: bolder;
+    padding-top: 5px;
+}
+
+nav ul li{
+    list-style-type:none;
+    justify-content: center; 
+    font-size: 15px; 
+}
+
+.yoga-suave, .yoga-din, .velas-aromas, .elementos-yoga, .mat-yoga, .cosmetica-natural, .euge-yoga, .euge-sobremi{
+    border: 2px solid darkolivegreen;
+    width: 320px;
+    height: 300px;
+    margin-top: 15px;
+    }
+
+.euge-yoga{
+    width: 800px;
+    height: 800px;
+}
+.euge-sobremi{width: 800px;
+    height: 800px}
+
+footer{
+    text-align: center;
+    font-size: 22px;
+    padding: 1em;
+    background-color: darkolivegreen;                         
+    margin-top:auto;
+    }
+
+    .logo-facebook {
+        width: 50px;
+        height: 50px;
+        border-style: none;
+    }
+    .logo-instagram{
+        width: 50px;
+        height: 50px;
+        border-style: none;
+    }
+    .contenido{color: darkolivegreen}
+
+    .logo-header{
+        height: 80px;
+        width: 120px;
+        justify-content: center;
+        transition: all 3s;
+    }
+
+    .h1-header{
+        color: darkolivegreen;
+        justify-content: center;
+        margin-left: 30px;
+}
+
+    .logo-header:hover{
+        transform:rotate(2turn)
+    }
+    .logo-header:hover{
+        animation: logo 4s;
+    }
+
+    @keyframes logo {
+    50%{background-color: lightgreen;
+    border-radius: 50%;}
+    }
+
+
+
+/*declarar mis áreas para grid*/
+
+header{
+    grid-area: header
+}
+
+nav {
+    grid-area: nav;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+.galeria-grid{
+    grid-area: galeria;
+}
+
+footer{
+    grid-area:footer;
+}
+
+/*empiezo a acomodar por áreas*/
+
+.grilla-general{
+    background-color: lightgray;
+    margin-bottom: 1.5em;
+    display: grid;
+    gap:20px;
+    grid-template-areas: 
+    "header"
+    "nav"
+    "contenido"
+    "galeria"
+    "footer";
+}
+
+.galeria-grid-img{
+    background-color: lightgray;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr;
+    gap: 10px;
+    justify-items: center;
+    color: darkolivegreen
+
+}
+
+    /*Desde aca son estilos para el html "productos"*/
+    .h2-productos{
+        margin-bottom: 20px;
+        color:darkolivegreen
+    }
+    .cat-productos, h2
+        {color:darkolivegreen}
+
+    
+
+
+@media (min-width:768px){
+    .grilla-general{
+        background-color: lightgray;
+        margin-bottom: 1.5em;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: 1fr;
+        grid-template-areas: 
+        "header       header"
+        "nav           nav"
+        "contenido    contenido"
+        "galeria      galeria"
+        "footer       footer"
+    }
+
+    .logo-header{height: 150px;
+    width: 200px;
+    margin-left: 35px;
+    }
+
+    .h1-header{font-size: 35px;
+    color: darkolivegreen;}
+
+    nav{height: 70px;}
+
+    nav ul li{
+        list-style-type:none;
+        justify-content: center; 
+        font-size: 25px;
+        margin: 5px; 
+        padding-top: 18px;
+        padding-bottom: 10px;
+    }
+    .contenido{
+        padding-top: 10px;
+        padding-bottom: 60px;
+        color: darkolivegreen}
+
+    .galeria-grid{
+        background-color: lightgray;
+    }
+    .galeria-grid-img{
+        background-color: lightgray;
+        display: grid;
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        justify-items: center;
+        margin-bottom: 50px;
+    }
+    img{
+        width: 380px;px;
+        height: 220px;
+        border: 2px darkolivegreen
+    }
+
+    footer{  
+        text-align: center;
+        font-size: 22px;
+        padding: 1em;
+        background-color: darkolivegreen;                         
+        margin-top:auto;
+    }
+
+    /*Desde aca son estilos para el html "productos"*/
+
+    /*declarar mis áreas para grid*/
+
+header{
+    grid-area: header
+}
+
+nav {
+    grid-area: nav;
+}
+
+.contenido{
+    grid-area: contenido;
+}
+
+.galeria-grid{
+    grid-area: galeria;
+}
+
+footer{
+    grid-area:footer;
+}
+
+.grilla-general-productos{
+    background-color: lightgray;
+    margin-bottom: 1.5em;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr  ;
+    grid-template-areas: 
+    "header         header"
+    "nav            nav"
+    "contenido      contenido"
+    "galeria        galeria"
+    "footer         footer"
+}
+
+
+@media(min-width:1024px){
+    body{
+        background-color: lightgray;
+    }
+
+    .galeria-grid-img{
+        background-color: lightgray;
+        display: grid;
+        grid-template-columns: 1fr  1fr;
+        grid-template-rows: 1fr;
+        gap: 10px;
+        justify-items: center;
+        margin-bottom: 50px;
+    } 
+
+    img{
+        width: 475px ;
+        height:400px ;
+        margin-top: 20px;
+        margin: 10px;
+    }
+    .contenido{
+        margin-top: 10px;
+    }
+
+        /*Desde aca son estilos para el html "productos"*/
+        .h2-productos{
+            margin-bottom: 20px;
+            color:darkolivegreen
+        }
+        .cat-productos
+            {color:darkolivegreen}
+        h2 {color:darkolivegreen}
+            
+}
